@@ -1,0 +1,314 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java: An Essential Pillar of Artificial Intelligence</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#0f172a',
+                        },
+                        java: {
+                            orange: '#f89820',
+                            red: '#5382a1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 via-amber-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/20">
+                    <i class="fa-fab fa-java"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-white">Java<span class="text-brand-500">.AI</span></span>
+                    <span class="block text-xs text-slate-400 font-medium">Enterprise AI Backbone</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#overview" class="text-slate-300 hover:text-brand-500 transition-colors">Overview</a>
+                <a href="#pillars" class="text-slate-300 hover:text-brand-500 transition-colors">Core Pillars</a>
+                <a href="#libraries" class="text-slate-300 hover:text-brand-500 transition-colors">Ecosystem</a>
+                <a href="#metrics" class="text-slate-300 hover:text-brand-500 transition-colors">Metrics</a>
+                <a href="#code" class="text-slate-300 hover:text-brand-500 transition-colors">Code Showcase</a>
+                <a href="#quiz" class="text-slate-300 hover:text-brand-500 transition-colors">Quiz</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-globe text-slate-400 ml-2 text-xs sm:text-sm"></i>
+                <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-transparent text-xs sm:text-sm text-slate-200 focus:outline-none font-medium cursor-pointer pr-2">
+                    <option value="en" class="bg-slate-900 text-white">English</option>
+                    <option value="hinglish" class="bg-slate-900 text-white" selected>Hinglish</option>
+                    <option value="hi" class="bg-slate-900 text-white">हिन्दी (Hindi)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="relative py-20 lg:py-28 overflow-hidden border-b border-slate-800/50">
+        <!-- Background Gradient Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-brand-500/30 text-brand-400 text-xs sm:text-sm font-semibold mb-8 shadow-sm">
+                <i class="fa-solid fa-microchip text-amber-500"></i>
+                <span id="heroBadge">Enterprise Grade Artificial Intelligence</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
+                <span id="heroTitle">Java: AI Ka Ek Modern Aur Scalable</span> 
+                <span class="gradient-text block mt-2">Important Pillar</span>
+            </h1>
+
+            <p id="heroDesc" class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Java sirf general application development ke liye nahi, balki large-scale enterprise AI systems, big data processing, microservices ML integration, aur high-concurrency neural networks ke liye sabse reliable foundation hai.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a href="#pillars" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-blue-700 text-white font-semibold shadow-lg shadow-brand-600/30 hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                    <span id="btnExplore">Explore Core Pillars</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#code" class="px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold border border-slate-700/80 transition-all duration-200 flex items-center gap-2">
+                    <i class="fa-solid fa-code text-brand-400"></i>
+                    <span id="btnCode">View Code Example</span>
+                </a>
+            </div>
+
+            <!-- Key Quick Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-4 sm:p-6 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-brand-400">#1</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1" id="stat1">Enterprise Choice</div>
+                </div>
+                <div class="glass-card p-4 sm:p-6 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-400">99.9%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1" id="stat2">Uptime Reliability</div>
+                </div>
+                <div class="glass-card p-4 sm:p-6 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-purple-400">WORA</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1" id="stat3">Cross-Platform</div>
+                </div>
+                <div class="glass-card p-4 sm:p-6 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-emerald-400">Multi-Thread</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1" id="stat4">Parallel Execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 Core Pillars Section -->
+    <section id="pillars" class="py-20 bg-slate-950/60 relative border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2" id="pillarSub">Core Architecture</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white" id="pillarTitle">Kyun Hai Java AI Ka Pillar?</h3>
+                <p class="text-slate-400 mt-3 text-base sm:text-lg" id="pillarDesc">5 major reasons jo Java ko production-level AI aur Machine Learning ke liye unbeatable banati hain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800/80 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 text-2xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3" id="p1Title">1. Enterprise Scalability</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="p1Desc">
+                        High-traffic enterprise platforms (jaise banking, e-commerce, banking fraud detection) me millions of requests handle karne ke liye Java JVM performance best-in-class hai.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800/80 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3" id="p2Title">2. Cross-Platform ("WORA")</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="p2Desc">
+                        "Write Once, Run Anywhere". JVM kisi bhi OS (Linux, Windows, Cloud VMs) par seamless AI deployment guarantee karta hai bina code rewrites ke.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800/80 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-2xl mb-6">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3" id="p3Title">3. Robust AI Libraries</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="p3Desc">
+                        Deeplearning4j (DL4J), Weka, Apache Spark MLlib, Apache OpenNLP jaise enterprise-ready powerful ML & NLP libraries Direct Java ecosystem me available hain.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800/80 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl mb-6">
+                        <i class="fa-solid fa-memory"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3" id="p4Title">4. Automatic Memory Mgmt</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="p4Desc">
+                        JVM Ka Advanced Garbage Collection large datasets processing aur heavy deep learning models ke waqt memory leaks prevent karta hai aur system stability rakhta hai.
+                    </p>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800/80 hover:border-rose-500/50 transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-2xl mb-6">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3" id="p5Title">5. Multi-threading & Concurrency</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" id="p5Desc">
+                        Parallel computing & neural network training me concurrency handling essential hoti hai. Java Multi-threading algorithms ko fast aur ultra-parallel execution deta hai.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Library Explorer -->
+    <section id="libraries" class="py-20 bg-slate-900/40 relative border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2" id="libSub">Ecosystem & Tooling</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white" id="libTitle">Java AI & ML Libraries Explorer</h3>
+                <p class="text-slate-400 mt-2" id="libDesc">Click on any library to inspect its purpose, features, and key use-cases.</p>
+            </div>
+
+            <!-- Library Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="libTabContainer">
+                <!-- JS will populate interactive tabs -->
+            </div>
+
+            <!-- Library Content Card -->
+            <div id="libraryDetailCard" class="glass-card p-6 sm:p-10 rounded-3xl border border-slate-800 max-w-4xl mx-auto transition-all duration-300">
+                <!-- JS inserted content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics & Strengths Visualizer -->
+    <section id="metrics" class="py-20 bg-slate-950 relative border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2" id="metricSub">Performance Evaluation</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white leading-tight" id="metricTitle">Why Enterprise Systems Prefer Java for AI</h3>
+                    <p class="text-slate-400 mt-4 leading-relaxed" id="metricDesc">
+                        Jab AI model prototype se continuous production level deployment (Large Scale Production) par shift hota hai, tab Java efficiency, security aur high-throughput me lead leta hai.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span id="mCheck1">Seamless Big Data Integration (Hadoop, Spark)</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span id="mCheck2">Bank-Grade Security Architecture</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span id="mCheck3">Zero Memory Leaks in 24/7 Running Services</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Metric Progress Bars -->
+                <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+                    <h4 class="text-xl font-bold text-white mb-2" id="metricBarHeader">Java Enterprise AI Capabilities Score</h4>
+                    
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span class="text-slate-200" id="mLabel1">Scalability & High Concurrency</span>
+                            <span class="text-brand-400">98%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-brand-600 to-blue-400 rounded-full transition-all duration-1000 w-[98%]"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span class="text-slate-200" id="mLabel2">Enterprise Security & Stability</span>
+                            <span class="text-emerald-400">96%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-emerald-600 to-teal-400 rounded-full transition-all duration-1000 w-[96%]"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span class="text-slate-200" id="mLabel3">Cross-Platform (WORA) Deployment</span>
+                            <span class="text-amber-400">95%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-amber-600 to-yellow-400 rounded-full transition-all duration-1000 w-[95%]"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span class="text-slate-200" id="mLabel4">Big Data Pipeline Integration</span>
+                            <span class="text-purple-400">92%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-600 to-pink-400 rounded-full transition-all duration-1000 w-[92%]"></div>
+                        </div
